@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensi padding untuk ikon di sebelah kanan `searchBar` -->
+    <dimen name="drawable_padding">8dp</dimen>
+</resources>

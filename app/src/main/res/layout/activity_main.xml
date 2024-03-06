@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="10dp">
+
+    <!-- Logo dan Judul -->
+    <LinearLayout
+        android:id="@+id/logoTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_background"
+            android:contentDescription="@string/logo_icon"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="YAALIL"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/versionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="v1.0 beta"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Layout untuk Kotak 1 dan Kotak 2 -->
+    <LinearLayout
+        android:id="@+id/box1Box2Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoTitleLayout"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- Kotak 1 -->
+        <LinearLayout
+            android:id="@+id/box1Layout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Logo Yaasin -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_background"
+                android:contentDescription="@string/yaasin_icon"
+                android:src="@drawable/ic_yaasin" />
+
+            <!-- Judul -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Surah Yaasin"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Kotak 2 -->
+        <LinearLayout
+            android:id="@+id/box2Layout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Logo Yaasin -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_background"
+                android:contentDescription="@string/tahlil_icon"
+                android:src="@drawable/ic_tahlil" />
+
+            <!-- Judul -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tahlil"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Kotak 3 -->
+    <LinearLayout
+        android:id="@+id/box3Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/wikiButtonLayout"
+        android:layout_below="@id/box1Box2Layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Logo Yaasin -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_background"
+            android:contentDescription="@string/surahpendek_icon"
+            android:src="@drawable/ic_surahpendek" />
+
+        <!-- Judul -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Surah-Surah Pendek"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Sub Judul -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Al-Fatihah &#8226; Al-Falaq &#8226; Al-Ikhlas &#8226; An-Naas\nAl-Baqarah"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <!-- Tombol Toko -->
+    <LinearLayout
+        android:id="@+id/wikiButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/wikiButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="3"
+            android:backgroundTint="#F6F6F6"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:text="WIKI"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+
+        <!-- Menu Bar -->
+        <LinearLayout
+            android:id="@+id/menuBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="7"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/infoIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Info Icon"
+                android:src="@drawable/ic_info"
+                android:tooltipText="Info" />
+
+            <ImageButton
+                android:id="@+id/alarmsIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Alarm Icon"
+                android:src="@drawable/ic_alarms"
+                android:tooltipText="Alarm" />
+
+            <ImageButton
+                android:id="@+id/settingsIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Settings Icon"
+                android:src="@drawable/ic_settings"
+                android:tooltipText="Settings" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
